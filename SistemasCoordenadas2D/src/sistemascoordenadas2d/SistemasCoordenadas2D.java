@@ -7,7 +7,7 @@ package sistemascoordenadas2d;
 
 public class SistemasCoordenadas2D {
 
-    public static void main(String[] args) {
+    public static void sistemascoordenadas2d(String[] args) {
         Cartesiana2D punto = new Cartesiana2D();
         Polar punto2 = new Polar();
         // Agregar las instrucciones necesarias para que se presente
