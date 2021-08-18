@@ -2,9 +2,7 @@ package sistemascoordenadas2d;
 
 public class Cilindrica {
 
-	private double radio;
-	private double angulo;
-	private double coorz;
+	private double radio, angulo, coorz;
 	
 	public Cilindrica() {
 		
@@ -13,7 +11,9 @@ public class Cilindrica {
 	public Cilindrica(double radio, double angulo, double coorz) {
 		
 		this.radio = radio;
+		
 		this.angulo = angulo;
+		
 		this.coorz = coorz;
 		
 	}
@@ -58,25 +58,28 @@ public class Cilindrica {
   
 		Cilindrica obj = new Cilindrica();
 		
+		
 		x = radio * Math.sin(angulo);
+		
 	    y = radio * Math.cos(angulo);
 	    z = coorz;
-	        
+	      
+	    
 	    return obj;
 	        
 	}
 	
 	public Cilindrica cilindrica_cartesiana3D(Cartesiana3D c) {
     	
+		
         return cilindrica_cartesiana3D(c.getX(), c.getY(), c.getZ());
+        
         
     }
 
 class Cartesiana3D {
 	
-	double x;
-	double y;
-	double z;
+	double x, y, z;
 	
 	public Cartesiana3D (){
 		
@@ -85,7 +88,9 @@ class Cartesiana3D {
 	public Cartesiana3D(double x, double y, double z) {
 		
 		this.x = x;
+		
 		this.y = y;
+		
 		this.z = z;
 		
 	}
@@ -131,7 +136,9 @@ class Cartesiana3D {
 		Cartesiana3D obj = new Cartesiana3D();
 		
 		r = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
+		
 		angulox = Math.acos(z / r);
+		
 		anguloy = Math.atan(y / x);
 		
 		return obj;
@@ -146,3 +153,4 @@ class Cartesiana3D {
 	
 }
 	
+}
